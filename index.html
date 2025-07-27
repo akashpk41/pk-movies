@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akash PK</title>
+  </head>
+
+  <body>
+
+     <!-- Tailwind CSS CDN -->
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+     <!-- DaisyUI CDN -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" />
+     <!-- AOS Animation CDN -->
+     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+     <!-- Header -->
+     <header class="bg-gradient-to-r from-purple-900 via-indigo-900 to-black text-white shadow-lg sticky top-0 z-50">
+          <div class="container mx-auto flex items-center justify-between py-4 px-6">
+               <div class="flex items-center space-x-3">
+                    <svg class="w-10 h-10 text-pink-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 21 12 17.27 7.82 21 9 12.91l-5-3.64 5.91-.91z"/></svg>
+                    <span class="text-3xl font-bold tracking-wide">PK <span class="text-pink-500">Movies</span></span>
+               </div>
+               <nav class="hidden md:flex space-x-8 text-lg">
+                    <a href="#trending" class="hover:text-pink-400 transition">Trending</a>
+                    <a href="#bollywood" class="hover:text-pink-400 transition">Bollywood</a>
+                    <a href="#south" class="hover:text-pink-400 transition">South Indian</a>
+                    <a href="#bengali" class="hover:text-pink-400 transition">Bengali</a>
+               </nav>
+               <button class="btn btn-outline btn-pink md:hidden">Menu</button>
+          </div>
+     </header>
+
+     <!-- Hero Section -->
+     <section class="relative bg-gradient-to-br from-black via-indigo-900 to-purple-900 text-white py-16 px-4 flex flex-col items-center justify-center" data-aos="fade-up">
+          <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-center">Welcome to <span class="text-pink-500">PK Movies</span></h1>
+          <p class="text-xl md:text-2xl mb-8 text-center max-w-2xl">Stream the latest trending, Bollywood, South Indian, and Bengali movies. Experience cinema like never before!</p>
+          <a href="#trending" class="btn btn-primary btn-lg bg-pink-500 border-none hover:bg-pink-600 transition">Explore Now</a>
+          <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+               <svg class="w-12 h-12 animate-bounce text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+          </div>
+     </section>
+
+     <!-- Trending Movies Section -->
+     <section id="trending" class="container mx-auto py-12 px-4" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-6 text-pink-500">Trending Movies</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+               <!-- Movie Card -->
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="zoom-in">
+                    <figure><img src="https://m.media-amazon.com/images/M/MV5BOTRkM2RlOWMtMTY5OS00MjgzLTljNmQtYWM0Mjc3NDFkYTgzXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Saiyaara</h3>
+                         <p>Action, Adventure, Sci-Fi</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-pink">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
+                    <figure><img src="https://images.filmibeat.com/ph-big/2025/05/war-21747728801_1.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">War 2</h3>
+                         <p>Action, Adventure, Fantasy</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-pink">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+                    <figure><img src="https://m.media-amazon.com/images/M/MV5BOWMzODc4ZjktNzZmZS00Nzg0LWIyMDUtM2ZkOTZkODk5NTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Coolie</h3>
+                         <p>Action, Drama, Sci-Fi</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-pink">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="300">
+                    <figure><img src="https://static.moviecrow.com/gallery/20240529/229761-Maha.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Maharaja</h3>
+                         <p>Action, Adventure, Fantasy</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-pink">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Bollywood Movies Section -->
+     <section id="bollywood" class="container mx-auto py-12 px-4" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-6 text-yellow-500">Bollywood Movies</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-left">
+                    <figure><img src="https://m.media-amazon.com/images/M/MV5BNDdkNTY1MDQtY2I5MC00OTFlLTg5OWQtZWE2YzE5NWFiMDgzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Pathaan</h3>
+                         <p>Action, Thriller</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-warning">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-left" data-aos-delay="100">
+                    <figure><img src="https://m.media-amazon.com/images/M/MV5BMTlmMTAyOGEtNTM2My00M2IwLWE0NDMtNzhhOTQ0Mzc5YmIyXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Brahmastra</h3>
+                         <p>Fantasy, Adventure</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-warning">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-left" data-aos-delay="200">
+                    <figure><img src="https://m.media-amazon.com/images/I/61s1GEAAi8L._UF1000,1000_QL80_.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">RRR</h3>
+                         <p>Action, Drama</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-warning">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-left" data-aos-delay="300">
+                    <figure><img src="https://m.media-amazon.com/images/M/MV5BZDQ3OWE4YzgtNWU3Ni00MzI2LWJmNDYtMWE1YjkxZTA3NGU3XkEyXkFqcGc@._V1_.jpg" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Bhool Bhulaiyaa 2</h3>
+                         <p>Comedy, Horror</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-warning">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- South Indian Movies Section -->
+     <section id="south" class="container mx-auto py-12 px-4" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-6 text-green-500">South Indian Movies</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-up">
+                    <figure><img src="https://m.media-amazon.com/images/M/MV5BZmQzZjVkZTUtYjI4ZC00ZDJmLWI0ZDUtZTFmMGM1Mzc5ZjIyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">KGF Chapter 2</h3>
+                         <p>Action, Drama</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-success">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-up" data-aos-delay="100">
+                    <figure><img src="https://m.media-amazon.com/images/M/MV5BODU2OTliNWMtMzc4MC00YmFjLWI5MjAtMjhjYTc1ZDJlMzY0XkEyXkFqcGc@._V1_.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Pushpa: The Rule</h3>
+                         <p>Action, Thriller</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-success">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-up" data-aos-delay="200">
+                    <figure><img src="https://w0.peakpx.com/wallpaper/442/459/HD-wallpaper-vikram-movie-kamal-haasan.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Vikram</h3>
+                         <p>Action, Thriller</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-success">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-up" data-aos-delay="300">
+                    <figure><img src="https://m.media-amazon.com/images/M/MV5BMjE5MzhjYmItMGFjNC00ODIxLWJkNjktYWMxYTU0ZTM3NGYzXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Jailer</h3>
+                         <p>Action, Comedy</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-success">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Bengali Movies Section -->
+     <section id="bengali" class="container mx-auto py-12 px-4" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-6 text-blue-500">Bengali Movies</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="fade-right">
+                    <figure><img src="https://image.tmdb.org/t/p/w500/8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Chotushkone</h3>
+                         <p>Drama, Thriller</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-info">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="fade-right" data-aos-delay="100">
+                    <figure><img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Bela Seshe</h3>
+                         <p>Drama, Family</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-info">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="fade-right" data-aos-delay="200">
+                    <figure><img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Feluda</h3>
+                         <p>Detective, Mystery</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-info">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="fade-right" data-aos-delay="300">
+                    <figure><img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Movie Poster" /></figure>
+                    <div class="card-body">
+                         <h3 class="card-title">Autograph</h3>
+                         <p>Drama, Romance</p>
+                         <div class="card-actions justify-end">
+                              <button class="btn btn-sm btn-info">Watch Now</button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Footer -->
+     <footer class="bg-gradient-to-r from-black via-indigo-900 to-purple-900 text-white py-8 mt-12">
+          <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+               <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-pink-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 21 12 17.27 7.82 21 9 12.91l-5-3.64 5.91-.91z"/></svg>
+                    <span class="font-bold text-xl">PK Movies</span>
+               </div>
+               <p class="mt-4 md:mt-0">&copy; 2025 PK Movies. All rights reserved.</p>
+               <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-pink-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.46.7a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.98C7.69 8.97 4.07 7.13 1.64 4.15c-.37.64-.58 1.39-.58 2.19 0 1.51.77 2.84 1.94 3.62a4.28 4.28 0 0 1-1.94-.54v.05c0 2.11 1.5 3.87 3.5 4.27-.37.1-.76.16-1.16.16-.28 0-.55-.03-.81-.08.55 1.72 2.16 2.97 4.07 3a8.6 8.6 0 0 1-5.32 1.84c-.35 0-.7-.02-1.04-.06A12.13 12.13 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.36 8.36 0 0 0 24 4.59a8.5 8.5 0 0 1-2.54.7z"/></svg></a>
+                    <a href="#" class="hover:text-pink-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-1.72-.153-6.89-.153-8.61 0-1.72.153-2.89.87-3.62 1.6-.73.73-1.45 1.9-1.6 3.62-.153 1.72-.153 6.89 0 8.61.153 1.72.87 2.89 1.6 3.62.73.73 1.9 1.45 3.62 1.6 1.72.153 6.89.153 8.61 0 1.72-.153 2.89-.87 3.62-1.6.73-.73 1.45-1.9 1.6-3.62.153-1.72.153-6.89 0-8.61-.153-1.72-.87-2.89-1.6-3.62-.73-.73-1.9-1.45-3.62-1.6zm-7.615 5.816v6l5.197-3-5.197-3z"/></svg></a>
+                    <a href="#" class="hover:text-pink-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.974-.974 2.241-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.775.131 4.602.401 3.635 1.368c-.967.967-1.237 2.14-1.296 3.417C2.013 5.668 2 6.077 2 9.333v5.334c0 3.256.013 3.665.072 4.945.059 1.277.329 2.45 1.296 3.417.967.967 2.14 1.237 3.417 1.296C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.277-.059 2.45-.329 3.417-1.296.967-.967 1.237-2.14 1.296-3.417.059-1.28.072-1.689.072-4.945V9.333c0-3.256-.013-3.665-.072-4.945-.059-1.277-.329-2.45-1.296-3.417-.967-.967-2.14-1.237-3.417-1.296C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+               </div>
+          </div>
+     </footer>
+
+     <!-- AOS Animation Script -->
+     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+     <script>
+          AOS.init({
+               duration: 900,
+               once: true,
+          });
+     </script>
+
+
+  </body>
+
+
+
+</html>

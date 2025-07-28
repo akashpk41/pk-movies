@@ -1,264 +1,687 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akash PK</title>
-  </head>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKStream - Premium Movie Experience</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/daisyui/2.51.5/full.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
 
-  <body>
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+        }
 
-     <!-- Tailwind CSS CDN -->
-     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-     <!-- DaisyUI CDN -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" />
-     <!-- AOS Animation CDN -->
-     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-     <!-- Header -->
-     <header class="bg-gradient-to-r from-purple-900 via-indigo-900 to-black text-white shadow-lg sticky top-0 z-50">
-          <div class="container mx-auto flex items-center justify-between py-4 px-6">
-               <div class="flex items-center space-x-3">
-                    <svg class="w-10 h-10 text-pink-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 21 12 17.27 7.82 21 9 12.91l-5-3.64 5.91-.91z"/></svg>
-                    <span class="text-3xl font-bold tracking-wide">PK <span class="text-pink-500">Movies</span></span>
-               </div>
-               <nav class="hidden md:flex space-x-8 text-lg">
-                    <a href="#trending" class="hover:text-pink-400 transition">Trending</a>
-                    <a href="#bollywood" class="hover:text-pink-400 transition">Bollywood</a>
-                    <a href="#south" class="hover:text-pink-400 transition">South Indian</a>
-                    <a href="#bengali" class="hover:text-pink-400 transition">Bengali</a>
-               </nav>
-               <button class="btn btn-outline btn-pink md:hidden">Menu</button>
-          </div>
-     </header>
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
 
-     <!-- Hero Section -->
-     <section class="relative bg-gradient-to-br from-black via-indigo-900 to-purple-900 text-white py-16 px-4 flex flex-col items-center justify-center" data-aos="fade-up">
-          <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-center">Welcome to <span class="text-pink-500">PK Movies</span></h1>
-          <p class="text-xl md:text-2xl mb-8 text-center max-w-2xl">Stream the latest trending, Bollywood, South Indian, and Bengali movies. Experience cinema like never before!</p>
-          <a href="#trending" class="btn btn-primary btn-lg bg-pink-500 border-none hover:bg-pink-600 transition">Explore Now</a>
-          <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-               <svg class="w-12 h-12 animate-bounce text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
-          </div>
-     </section>
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+        }
 
-     <!-- Trending Movies Section -->
-     <section id="trending" class="container mx-auto py-12 px-4" data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-6 text-pink-500">Trending Movies</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-               <!-- Movie Card -->
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="zoom-in">
-                    <figure><img src="https://m.media-amazon.com/images/M/MV5BOTRkM2RlOWMtMTY5OS00MjgzLTljNmQtYWM0Mjc3NDFkYTgzXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Saiyaara</h3>
-                         <p>Action, Adventure, Sci-Fi</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-pink">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
-                    <figure><img src="https://images.filmibeat.com/ph-big/2025/05/war-21747728801_1.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">War 2</h3>
-                         <p>Action, Adventure, Fantasy</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-pink">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
-                    <figure><img src="https://m.media-amazon.com/images/M/MV5BOWMzODc4ZjktNzZmZS00Nzg0LWIyMDUtM2ZkOTZkODk5NTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Coolie</h3>
-                         <p>Action, Drama, Sci-Fi</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-pink">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="300">
-                    <figure><img src="https://static.moviecrow.com/gallery/20240529/229761-Maha.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Maharaja</h3>
-                         <p>Action, Adventure, Fantasy</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-pink">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </section>
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
 
-     <!-- Bollywood Movies Section -->
-     <section id="bollywood" class="container mx-auto py-12 px-4" data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-6 text-yellow-500">Bollywood Movies</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-left">
-                    <figure><img src="https://m.media-amazon.com/images/M/MV5BNDdkNTY1MDQtY2I5MC00OTFlLTg5OWQtZWE2YzE5NWFiMDgzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Pathaan</h3>
-                         <p>Action, Thriller</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-warning">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-left" data-aos-delay="100">
-                    <figure><img src="https://m.media-amazon.com/images/M/MV5BMTlmMTAyOGEtNTM2My00M2IwLWE0NDMtNzhhOTQ0Mzc5YmIyXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Brahmastra</h3>
-                         <p>Fantasy, Adventure</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-warning">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-left" data-aos-delay="200">
-                    <figure><img src="https://m.media-amazon.com/images/I/61s1GEAAi8L._UF1000,1000_QL80_.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">RRR</h3>
-                         <p>Action, Drama</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-warning">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-left" data-aos-delay="300">
-                    <figure><img src="https://m.media-amazon.com/images/M/MV5BZDQ3OWE4YzgtNWU3Ni00MzI2LWJmNDYtMWE1YjkxZTA3NGU3XkEyXkFqcGc@._V1_.jpg" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Bhool Bhulaiyaa 2</h3>
-                         <p>Comedy, Horror</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-warning">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </section>
+        .text-gradient {
+            background: linear-gradient(45deg, #8b5cf6, #06b6d4, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-     <!-- South Indian Movies Section -->
-     <section id="south" class="container mx-auto py-12 px-4" data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-6 text-green-500">South Indian Movies</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-up">
-                    <figure><img src="https://m.media-amazon.com/images/M/MV5BZmQzZjVkZTUtYjI4ZC00ZDJmLWI0ZDUtZTFmMGM1Mzc5ZjIyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">KGF Chapter 2</h3>
-                         <p>Action, Drama</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-success">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-up" data-aos-delay="100">
-                    <figure><img src="https://m.media-amazon.com/images/M/MV5BODU2OTliNWMtMzc4MC00YmFjLWI5MjAtMjhjYTc1ZDJlMzY0XkEyXkFqcGc@._V1_.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Pushpa: The Rule</h3>
-                         <p>Action, Thriller</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-success">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-up" data-aos-delay="200">
-                    <figure><img src="https://w0.peakpx.com/wallpaper/442/459/HD-wallpaper-vikram-movie-kamal-haasan.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Vikram</h3>
-                         <p>Action, Thriller</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-success">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="flip-up" data-aos-delay="300">
-                    <figure><img src="https://m.media-amazon.com/images/M/MV5BMjE5MzhjYmItMGFjNC00ODIxLWJkNjktYWMxYTU0ZTM3NGYzXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Jailer</h3>
-                         <p>Action, Comedy</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-success">Watch Now</button>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </section>
+        .navbar-glass {
+            backdrop-filter: blur(10px);
+            background: rgba(15, 15, 35, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-     <!-- Bengali Movies Section -->
-     <section id="bengali" class="container mx-auto py-12 px-4" data-aos="fade-up">
-          <h2 class="text-3xl font-bold mb-6 text-blue-500">Bengali Movies</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="fade-right">
-                    <figure><img src="https://image.tmdb.org/t/p/w500/8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Chotushkone</h3>
-                         <p>Drama, Thriller</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-info">Watch Now</button>
-                         </div>
+        .movie-card {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-movie {
+            background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23000" width="100%" height="100%"/><rect fill="%23111" x="200" y="100" width="800" height="600" rx="20"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+    <!-- Navigation -->
+    <div class="navbar navbar-glass fixed top-0 z-50 px-4 lg:px-8">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#trending">Trending</a></li>
+                    <li><a href="#hollywood">Hollywood</a></li>
+                    <li><a href="#bollywood">Bollywood</a></li>
+                    <li><a href="#south-indian">South Indian</a></li>
+                </ul>
+            </div>
+            <a class="text-2xl font-bold text-gradient">PK Stream</a>
+        </div>
+
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-lg">
+                <li><a href="#trending" class="hover:text-purple-400 transition-colors">Trending</a></li>
+                <li><a href="#hollywood" class="hover:text-blue-400 transition-colors">Hollywood</a></li>
+                <li><a href="#bollywood" class="hover:text-green-400 transition-colors">Bollywood</a></li>
+                <li><a href="#south-indian" class="hover:text-yellow-400 transition-colors">South Indian</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-end">
+            <div class="form-control mr-4">
+                <input type="text" placeholder="Search movies..." class="input input-bordered w-24 md:w-auto bg-opacity-50" />
+            </div>
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 rounded-full">
+                        <i class="fas fa-user-circle text-2xl"></i>
                     </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="fade-right" data-aos-delay="100">
-                    <figure><img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Bela Seshe</h3>
-                         <p>Drama, Family</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-info">Watch Now</button>
-                         </div>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a>Profile</a></li>
+                    <li><a>Watchlist</a></li>
+                    <li><a>Settings</a></li>
+                    <li><a>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-screen hero-movie relative overflow-hidden">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content relative z-10">
+            <div class="max-w-4xl">
+                <h1 class="mb-8 text-6xl md:text-8xl font-bold text-gradient animate-pulse">
+                    Premium Cinema Experience
+                </h1>
+                <p class="mb-8 text-xl md:text-2xl max-w-2xl mx-auto opacity-90">
+                    Discover unlimited movies from Hollywood, Bollywood, and South Indian cinema.
+                    Stream in 4K quality with no interruptions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="btn btn-primary btn-lg glow-effect text-white">
+                        <i class="fas fa-play mr-2"></i>
+                        Start Watching
+                    </button>
+                    <button class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-black">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl opacity-70"></i>
+        </div>
+    </section>
+
+    <!-- Trending Movies -->
+    <section id="trending" class="py-20 px-4 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
+                <i class="fas fa-fire text-orange-500 mr-4"></i>
+                Trending Now
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-64 bg-gradient-to-br from-red-500 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-film text-4xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute top-2 right-2 badge badge-error">9.1</div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-lg">Oppenheimer</h3>
+                        <p class="text-sm opacity-70">2023 • Drama</p>
+                        <div class="card-actions justify-end mt-2">
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-play mr-1"></i>
+                                Play
+                            </button>
+                        </div>
                     </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="fade-right" data-aos-delay="200">
-                    <figure><img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Feluda</h3>
-                         <p>Detective, Mystery</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-info">Watch Now</button>
-                         </div>
+                </div>
+
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-64 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                            <i class="fas fa-film text-4xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute top-2 right-2 badge badge-warning">8.8</div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-lg">Avatar 2</h3>
+                        <p class="text-sm opacity-70">2022 • Sci-Fi</p>
+                        <div class="card-actions justify-end mt-2">
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-play mr-1"></i>
+                                Play
+                            </button>
+                        </div>
                     </div>
-               </div>
-               <div class="card bg-base-100 shadow-xl hover:scale-105 transition" data-aos="fade-right" data-aos-delay="300">
-                    <figure><img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Movie Poster" /></figure>
-                    <div class="card-body">
-                         <h3 class="card-title">Autograph</h3>
-                         <p>Drama, Romance</p>
-                         <div class="card-actions justify-end">
-                              <button class="btn btn-sm btn-info">Watch Now</button>
-                         </div>
+                </div>
+
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-64 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                            <i class="fas fa-film text-4xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute top-2 right-2 badge badge-success">8.5</div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-lg">Spider-Verse</h3>
+                        <p class="text-sm opacity-70">2023 • Animation</p>
+                        <div class="card-actions justify-end mt-2">
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-play mr-1"></i>
+                                Play
+                            </button>
+                        </div>
                     </div>
-               </div>
-          </div>
-     </section>
+                </div>
 
-     <!-- Footer -->
-     <footer class="bg-gradient-to-r from-black via-indigo-900 to-purple-900 text-white py-8 mt-12">
-          <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-               <div class="flex items-center space-x-2">
-                    <svg class="w-8 h-8 text-pink-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 21 12 17.27 7.82 21 9 12.91l-5-3.64 5.91-.91z"/></svg>
-                    <span class="font-bold text-xl">PK Movies</span>
-               </div>
-               <p class="mt-4 md:mt-0">&copy; 2025 PK Movies. All rights reserved.</p>
-               <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-pink-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.46.7a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.98C7.69 8.97 4.07 7.13 1.64 4.15c-.37.64-.58 1.39-.58 2.19 0 1.51.77 2.84 1.94 3.62a4.28 4.28 0 0 1-1.94-.54v.05c0 2.11 1.5 3.87 3.5 4.27-.37.1-.76.16-1.16.16-.28 0-.55-.03-.81-.08.55 1.72 2.16 2.97 4.07 3a8.6 8.6 0 0 1-5.32 1.84c-.35 0-.7-.02-1.04-.06A12.13 12.13 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.36 8.36 0 0 0 24 4.59a8.5 8.5 0 0 1-2.54.7z"/></svg></a>
-                    <a href="#" class="hover:text-pink-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-1.72-.153-6.89-.153-8.61 0-1.72.153-2.89.87-3.62 1.6-.73.73-1.45 1.9-1.6 3.62-.153 1.72-.153 6.89 0 8.61.153 1.72.87 2.89 1.6 3.62.73.73 1.9 1.45 3.62 1.6 1.72.153 6.89.153 8.61 0 1.72-.153 2.89-.87 3.62-1.6.73-.73 1.45-1.9 1.6-3.62.153-1.72.153-6.89 0-8.61-.153-1.72-.87-2.89-1.6-3.62-.73-.73-1.9-1.45-3.62-1.6zm-7.615 5.816v6l5.197-3-5.197-3z"/></svg></a>
-                    <a href="#" class="hover:text-pink-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.974-.974 2.241-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.775.131 4.602.401 3.635 1.368c-.967.967-1.237 2.14-1.296 3.417C2.013 5.668 2 6.077 2 9.333v5.334c0 3.256.013 3.665.072 4.945.059 1.277.329 2.45 1.296 3.417.967.967 2.14 1.237 3.417 1.296C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.277-.059 2.45-.329 3.417-1.296.967-.967 1.237-2.14 1.296-3.417.059-1.28.072-1.689.072-4.945V9.333c0-3.256-.013-3.665-.072-4.945-.059-1.277-.329-2.45-1.296-3.417-.967-.967-2.14-1.237-3.417-1.296C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
-               </div>
-          </div>
-     </footer>
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-64 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center">
+                            <i class="fas fa-film text-4xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute top-2 right-2 badge badge-info">8.9</div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-lg">Dune: Part Two</h3>
+                        <p class="text-sm opacity-70">2024 • Adventure</p>
+                        <div class="card-actions justify-end mt-2">
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-play mr-1"></i>
+                                Play
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-     <!-- AOS Animation Script -->
-     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-     <script>
-          AOS.init({
-               duration: 900,
-               once: true,
-          });
-     </script>
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-film text-4xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute top-2 right-2 badge badge-secondary">8.7</div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-lg">Barbie</h3>
+                        <p class="text-sm opacity-70">2023 • Comedy</p>
+                        <div class="card-actions justify-end mt-2">
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-play mr-1"></i>
+                                Play
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Hollywood Movies -->
+    <section id="hollywood" class="py-20 px-4 lg:px-8 bg-base-200 bg-opacity-30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
+                <i class="fas fa-star text-yellow-500 mr-4"></i>
+                Hollywood Blockbusters
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden h-80">
+                        <div class="w-full h-full bg-gradient-to-br from-indigo-600 to-purple-700 flex items-center justify-center">
+                            <i class="fas fa-video text-5xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">The Batman</h3>
+                            <p class="text-sm text-gray-300">2022 • Action</p>
+                        </div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <div class="flex justify-between items-center">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <span class="text-sm font-bold">8.2/10</span>
+                        </div>
+                        <div class="card-actions justify-between mt-4">
+                            <button class="btn btn-primary btn-sm flex-1 mr-2">
+                                <i class="fas fa-play mr-1"></i>
+                                Watch Now
+                            </button>
+                            <button class="btn btn-ghost btn-sm">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-  </body>
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden h-80">
+                        <div class="w-full h-full bg-gradient-to-br from-red-600 to-orange-700 flex items-center justify-center">
+                            <i class="fas fa-video text-5xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Top Gun: Maverick</h3>
+                            <p class="text-sm text-gray-300">2022 • Action</p>
+                        </div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <div class="flex justify-between items-center">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            </div>
+                            <span class="text-sm font-bold">8.9/10</span>
+                        </div>
+                        <div class="card-actions justify-between mt-4">
+                            <button class="btn btn-primary btn-sm flex-1 mr-2">
+                                <i class="fas fa-play mr-1"></i>
+                                Watch Now
+                            </button>
+                            <button class="btn btn-ghost btn-sm">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden h-80">
+                        <div class="w-full h-full bg-gradient-to-br from-green-600 to-blue-700 flex items-center justify-center">
+                            <i class="fas fa-video text-5xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">Black Panther 2</h3>
+                            <p class="text-sm text-gray-300">2022 • Action</p>
+                        </div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <div class="flex justify-between items-center">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <span class="text-sm font-bold">8.1/10</span>
+                        </div>
+                        <div class="card-actions justify-between mt-4">
+                            <button class="btn btn-primary btn-sm flex-1 mr-2">
+                                <i class="fas fa-play mr-1"></i>
+                                Watch Now
+                            </button>
+                            <button class="btn btn-ghost btn-sm">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden h-80">
+                        <div class="w-full h-full bg-gradient-to-br from-yellow-600 to-red-700 flex items-center justify-center">
+                            <i class="fas fa-video text-5xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-xl font-bold text-white">John Wick 4</h3>
+                            <p class="text-sm text-gray-300">2023 • Action</p>
+                        </div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <div class="flex justify-between items-center">
+                            <div class="rating rating-sm">
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <span class="text-sm font-bold">8.6/10</span>
+                        </div>
+                        <div class="card-actions justify-between mt-4">
+                            <button class="btn btn-primary btn-sm flex-1 mr-2">
+                                <i class="fas fa-play mr-1"></i>
+                                Watch Now
+                            </button>
+                            <button class="btn btn-ghost btn-sm">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Bollywood Movies -->
+    <section id="bollywood" class="py-20 px-4 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
+                <i class="fas fa-music text-green-500 mr-4"></i>
+                Bollywood Hits
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+                            <i class="fas fa-heart text-3xl text-white opacity-50"></i>
+                        </div>
+                    </figure>
+                    <div class="card-body p-3">
+                        <h3 class="card-title text-sm">Pathaan</h3>
+                        <p class="text-xs opacity-70">2023 • Action</p>
+                    </div>
+                </div>
+
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-crown text-3xl text-white opacity-50"></i>
+                        </div>
+                    </figure>
+                    <div class="card-body p-3">
+                        <h3 class="card-title text-sm">RRR</h3>
+                        <p class="text-xs opacity-70">2022 • Drama</p>
+                    </div>
+                </div>
+
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-48 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                            <i class="fas fa-gem text-3xl text-white opacity-50"></i>
+                        </div>
+                    </figure>
+                    <div class="card-body p-3">
+                        <h3 class="card-title text-sm">Brahmastra</h3>
+                        <p class="text-xs opacity-70">2022 • Fantasy</p>
+                    </div>
+                </div>
+
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                            <i class="fas fa-fist-raised text-3xl text-white opacity-50"></i>
+                        </div>
+                    </figure>
+                    <div class="card-body p-3">
+                        <h3 class="card-title text-sm">KGF Chapter 2</h3>
+                        <p class="text-xs opacity-70">2022 • Action</p>
+                    </div>
+                </div>
+
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-48 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center">
+                            <i class="fas fa-sword text-3xl text-white opacity-50"></i>
+                        </div>
+                    </figure>
+                    <div class="card-body p-3">
+                        <h3 class="card-title text-sm">Dangal</h3>
+                        <p class="text-xs opacity-70">2016 • Sports</p>
+                    </div>
+                </div>
+
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden">
+                        <div class="w-full h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-star text-3xl text-white opacity-50"></i>
+                        </div>
+                    </figure>
+                    <div class="card-body p-3">
+                        <h3 class="card-title text-sm">3 Idiots</h3>
+                        <p class="text-xs opacity-70">2009 • Comedy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- South Indian Movies -->
+    <section id="south-indian" class="py-20 px-4 lg:px-8 bg-base-200 bg-opacity-30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
+                <i class="fas fa-dragon text-yellow-500 mr-4"></i>
+                South Indian Cinema
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden h-64">
+                        <div class="w-full h-full bg-gradient-to-br from-red-600 to-orange-700 flex items-center justify-center">
+                            <i class="fas fa-fire text-5xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 badge badge-accent">Telugu</div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-xl">Baahubali 2</h3>
+                        <p class="text-sm opacity-70 mb-4">The epic conclusion to the Baahubali saga, featuring stunning visuals and intense action sequences.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="badge badge-primary">9.2 IMDb</span>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-play mr-1"></i>
+                                Watch
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden h-64">
+                        <div class="w-full h-full bg-gradient-to-br from-blue-600 to-cyan-700 flex items-center justify-center">
+                            <i class="fas fa-bolt text-5xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 badge badge-success">Tamil</div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-xl">Vikram</h3>
+                        <p class="text-sm opacity-70 mb-4">A gripping action thriller starring Kamal Haasan in a riveting tale of revenge and justice.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="badge badge-primary">8.9 IMDb</span>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-play mr-1"></i>
+                                Watch
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card movie-card card-hover cursor-pointer">
+                    <figure class="relative overflow-hidden h-64">
+                        <div class="w-full h-full bg-gradient-to-br from-purple-600 to-pink-700 flex items-center justify-center">
+                            <i class="fas fa-mask text-5xl text-white opacity-50"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 badge badge-warning">Kannada</div>
+                    </figure>
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-xl">Kantara</h3>
+                        <p class="text-sm opacity-70 mb-4">A mystical thriller that blends folklore with intense drama in a captivating narrative.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="badge badge-primary">8.7 IMDb</span>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-play mr-1"></i>
+                                Watch
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 px-4 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Why Choose PK Stream?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="stat place-items-center">
+                    <div class="stat-figure text-primary">
+                        <i class="fas fa-film text-4xl"></i>
+                    </div>
+                    <div class="stat-title">Movies Available</div>
+                    <div class="stat-value text-primary">10,000+</div>
+                    <div class="stat-desc">In multiple languages</div>
+                </div>
+
+                <div class="stat place-items-center">
+                    <div class="stat-figure text-secondary">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <div class="stat-title">Active Users</div>
+                    <div class="stat-value text-secondary">50M+</div>
+                    <div class="stat-desc">Worldwide streaming</div>
+                </div>
+
+                <div class="stat place-items-center">
+                    <div class="stat-figure text-accent">
+                        <i class="fas fa-star text-4xl"></i>
+                    </div>
+                    <div class="stat-title">Average Rating</div>
+                    <div class="stat-value text-accent">4.8/5</div>
+                    <div class="stat-desc">User satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 px-4 lg:px-8 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Stay Updated</h2>
+            <p class="text-xl mb-8 opacity-90">Get notified about new releases and exclusive content</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email" class="input input-bordered flex-1" />
+                <button class="btn btn-primary">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 bg-opacity-50 text-base-content">
+        <div>
+            <div class="text-3xl font-bold text-gradient mb-4">PK Stream</div>
+            <p class="font-bold">
+                Premium Movie Streaming Platform
+                <br/>
+                Unlimited Entertainment Since 2025
+            </p>
+            <p class="opacity-70">Copyright © 2025 - All rights reserved</p>
+        </div>
+        <div>
+            <div class="grid grid-flow-col gap-4">
+                <a class="text-2xl hover:text-primary transition-colors">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="text-2xl hover:text-primary transition-colors">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a class="text-2xl hover:text-primary transition-colors">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a class="text-2xl hover:text-primary transition-colors">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-opacity-95');
+            } else {
+                navbar.classList.remove('bg-opacity-95');
+            }
+        });
+
+        // Add click effects to movie cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('click', function() {
+                // Add a subtle scale effect on click
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Simulate loading effect for movie posters
+        document.addEventListener('DOMContentLoaded', function() {
+            const movieCards = document.querySelectorAll('.movie-card');
+            movieCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Add dynamic rating interaction
+        document.querySelectorAll('.rating input').forEach(star => {
+            star.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.2)';
+            });
+            star.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
 </html>
